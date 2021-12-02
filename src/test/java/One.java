@@ -43,7 +43,7 @@ import org.junit.jupiter.api.Test;
  * Consider sums of a three-measurement sliding window. How many sums are larger than the previous sum?
  */
 
-public class one {
+public class One {
 	LinkedList<Integer> buffer = new LinkedList<>();
 	ArrayList<Integer> numbers = new ArrayList<>();
 	int counter = 0;
@@ -60,6 +60,7 @@ public class one {
 			buffer.add(numbers.get(i));
 		}
 
+		// iterate entire list of numbers
 		for (int i = 3; i < numbers.size(); i++) {
 			int sum = getSum();
 			if(sum > lastSum){
@@ -68,6 +69,8 @@ public class one {
 			lastSum = sum;
 			buffer.push(numbers.get(i));
 		}
+
+		//answer here
 		System.out.println(counter);
 
 	}
